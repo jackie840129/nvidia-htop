@@ -3,7 +3,7 @@
 #######
 # USAGE
 #
-# nvidia-smi | nvidia-htop.py [-l [length]]
+# nvidia-htop [-l [length]]
 #   print GPU utilization with usernames and CPU stats for each GPU-utilizing process
 #
 #   -l|--command-length [length]     Print longer part of the commandline. If `length'

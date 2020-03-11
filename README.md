@@ -20,7 +20,7 @@ Note: for backward compatibility, `nvidia-smi | nvidia-htop.py [-l [length]]` is
 
 ## Example output
 
-    $ nvidia-htop.py -l
+    $ nvidia-htop -l
     Mon May 21 15:06:35 2018
     +-----------------------------------------------------------------------------+
     | NVIDIA-SMI 390.25                 Driver Version: 390.25                    |
