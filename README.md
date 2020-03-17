@@ -20,10 +20,10 @@ Note: for backward compatibility, `nvidia-smi | nvidia-htop [-l [length]]` is al
 
 ## Only show the version of NVCC
 
-    Sometimes the CUDA version after typing "nvidia-smi" is not consistent to the version after
-    typing "nvcc --version" (owing to calling different API). 
+Sometimes the CUDA version after typing "nvidia-smi" is not consistent to the version after
+typing "nvcc --version" (owing to calling different API). 
 
-    For the deep learning toolkit, the version for "nvcc" matters. Therefore I change the output from CUDA to nvcc.
+For the deep learning toolkit, the version for "nvcc" matters. Therefore I change the output from CUDA to nvcc.
 
 ## Example output
 
