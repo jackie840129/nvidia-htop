@@ -3,11 +3,11 @@
 A tool for enriching the output of `nvidia-smi`.
 
 # Install
-`pip install .`
+`pip3 install .`
 
 ## Usage
 
-    nvidia-htop.py [-l [length]]
+    nvidia-htop  [-l [length]][-c]
       print GPU utilization with usernames and CPU stats for each GPU-utilizing process
 
       -l|--command-length [length]     Print longer part of the commandline. If `length'
@@ -16,14 +16,21 @@ A tool for enriching the output of `nvidia-smi`.
       -c|--color                       Colorize the output (green - free GPU, yellow -
                                        moderately used GPU, red - fully used GPU)
 
-Note: for backward compatibility, `nvidia-smi | nvidia-htop.py [-l [length]]` is also supported.
+Note: for backward compatibility, `nvidia-smi | nvidia-htop [-l [length]]` is also supported.
+
+## Only show the version of NVCC
+
+    Sometimes the CUDA version after typing "nvidia-smi" is not consistent to the version after
+    typing "nvcc --version" (owing to calling different API). 
+
+    For the deep learning toolkit, the version for "nvcc" matters. Therefore I change the output from CUDA to nvcc.
 
 ## Example output
 
     $ nvidia-htop -l
     Mon May 21 15:06:35 2018
     +-----------------------------------------------------------------------------+
-    | NVIDIA-SMI 390.25                 Driver Version: 390.25                    |
+    | NVIDIA-SMI 390.25          Driver Version: 390.25      NVCC Version : 10.1  |
     |-------------------------------+----------------------+----------------------+
     | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
     | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
